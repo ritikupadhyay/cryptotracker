@@ -8,19 +8,18 @@ export default function PaginationControlled({ page, handlePageChange }) {
     <div className="pagination-div">
       <Pagination
         sx={{
-          "& .MuiPaginationItem-text": {
+          color: "var(--white)",
+          "& .Mui-selected ": {
+            backgroundColor: "var(--blue) !important",
             color: "#fff !important",
-            border: "1px solid var(--grey)",
-          },
-          "& .MuiPaginationItem-text:hover": {
-            backgroundColor: "transparent !important",
-          },
-          "& .Mui-selected  ": {
-            backgroundColor: "var(--blue)",
-            borderColor: "var(--blue)",
+            borderColor: "var(--blue) !important",
           },
           "& .MuiPaginationItem-ellipsis": {
-            border: "none",
+            border: "0px solid var(--grey) !important",
+          },
+          "& .MuiPaginationItem-text": {
+            color: "var(--white)",
+            border: "1px solid var(--grey)",
           },
         }}
         count={10}
