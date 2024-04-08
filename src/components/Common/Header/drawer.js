@@ -57,7 +57,21 @@ export default function TemporaryDrawer() {
           <a href="/dashboard">
             <p className="link">Dashboard</p>
           </a>
-          <Switch checked={darkMode} onClick={() => changeMode()} />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "flex-start",
+              alignItems: "center",
+            }}
+          >
+            <p className="link">{darkMode ? "Light Mode" : "Dark Mode"}</p>
+            <Switch
+              checked={darkMode}
+              onClick={() => {
+                changeMode();
+              }}
+            />
+          </div>
         </div>
       </Drawer>
     </div>
